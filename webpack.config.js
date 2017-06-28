@@ -5,7 +5,7 @@ var config = {
   entry: './src/index.js',
   output: {
     filename: 'index.js',
-    path: '/public',
+    path: path.join(__dirname, '/'),
   },
   module: {
     rules: [
@@ -17,8 +17,6 @@ var config = {
     ],
   },
   devServer: {
-    contentBase: path.join(__dirname, '/'),
-    publicPath: '/public',
     port: 8080,
   },
   plugins: [
