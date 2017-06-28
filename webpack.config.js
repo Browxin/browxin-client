@@ -1,26 +1,40 @@
 var path = require('path');
 var webpack = require('webpack');
+
 var config = {
   entry: './src/index.js',
   output: {
-    path: path.join(__dirname, '/public'),
-    filename: 'index.js'
-  },
-  resolve: {
-    extensions: ['.js', '.jsx']
+    filename: 'index.js',
+    path: '/public',
   },
   module: {
-    loaders: [
+    rules: [
       {
-        test: /\.jsx$|\.js$/,
+        test: /\.js$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
-        query: {
-          presets: ['react', 'es2015']
-        }
-      }
-    ]
-  }
+      },
+    ],
+  },
+  devServer: {
+    contentBase: path.join(__dirname, '/'),
+    publicPath: '/public',
+    port: 8080,
+  },
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env':{
+        'NODE_ENV': JSON.stringify('production')
+      },
+    }),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery',
+    }),
+    new webpack.HotModuleReplacementPlugin(),
+  ],
 };
 
 module.exports = config;
+
