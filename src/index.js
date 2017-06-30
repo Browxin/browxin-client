@@ -1,14 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'bootstrap';
-import {
-  Grid,
-  FormGroup,
-  InputGroup,
-  FormControl,
-  Button,
-  Glyphicon,
-} from 'react-bootstrap';
+import { Grid } from 'react-bootstrap';
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
+import { createLogger } from 'redux-logger';
+import Command from './Command/Command';
+import reducer from './reducers.js';
 
 class Index extends React.Component {
   render(){
@@ -16,23 +14,17 @@ class Index extends React.Component {
       <Grid>
         <h1>Browxin</h1>
         <p className="lead hidden-xs">Open Source, Multiple Search, Commands, Custom Widgets</p>
-        <form>
-          <FormGroup>
-            <InputGroup>
-              <InputGroup.Addon><Glyphicon glyph="search" /></InputGroup.Addon>
-              <FormControl placeholder="検索" type="search" />
-              <InputGroup.Button>
-                <Button>Go</Button>
-              </InputGroup.Button>
-            </InputGroup>
-          </FormGroup>
-        </form>
+        <Command />
       </Grid>
     );
   }
 }
 
+const logger = createLogger();
+const createStoreWithMiddleware = applyMiddleware(logger)(createStore);
+const store = createStoreWithMiddleware(reducer);
+
 ReactDOM.render(
-  <Index />,
+  <Provider store={store}><Index /></Provider>,
   document.getElementById('app')
 );
