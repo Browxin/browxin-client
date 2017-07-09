@@ -13,11 +13,10 @@ It can be used by pc, tablet, smart phone, even sidebar of browser.
 As I said, it's a platform, so you can make your own App and commit.
 All Apps should be free in Browxin.
 
-## For Developers
-You can run Browxin in your local machine.
-I only provide client side but it's enough to make new App.
-
 -->
+## For Developers
+You can run Browxin in your local machine to develop.
+
 ### Install
 Make sure you have installed npm, node.js.
 Then run commands below.
