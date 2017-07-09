@@ -1,6 +1,6 @@
 {
   "name": "browxin-client",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "engines": {
     "node": "7.3.0",
     "npm": "3.10.10"
@@ -9,11 +9,12 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",
-    "test": "./node_modules/.bin/testem ci -l Firefox,PhantomJS"
+    "test": "./node_modules/.bin/testem ci -l Firefox,PhantomJS",
+    "build": "webpack --display-error-details --optimize-minimize"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rikuson/browxin-client.git"
+    "url": "git+https://github.com/Browxin/browxin-client.git"
   },
   "keywords": [
     "browxin",
@@ -21,7 +22,7 @@
     "app",
     "platform"
   ],
-  "author": "Rikson",
+  "author": "rikson",
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/rikuson/browxin-client/issues"
