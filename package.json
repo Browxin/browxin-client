@@ -4,7 +4,8 @@
   "description": "Web App Platform",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+	"test": "./node_modules/.bin/testem ci -l Firefox"
   },
   "repository": {
     "type": "git",
@@ -22,7 +23,11 @@
     "url": "https://github.com/rikuson/browxin-client/issues"
   },
   "homepage": "https://github.com/rikuson/browxin-client#readme",
-  "devDependencies": {},
+  "devDependencies": {
+    "chai": "^4.0.2",
+    "mocha": "^3.4.2",
+    "testem": "^1.18.0"
+  },
   "dependencies": {
     "babel-core": "^6.23.1",
     "babel-loader": "^6.3.2",
