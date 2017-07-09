@@ -2,8 +2,8 @@
   "name": "browxin-client",
   "version": "0.0.0",
   "engines": {
-	  "node": "7.3.0",
-	  "npm": "3.10.10"
+    "node": "7.3.0",
+    "npm": "3.10.10"
   },
   "description": "Web App Platform",
   "main": "index.js",
@@ -30,7 +30,7 @@
   "devDependencies": {
     "chai": "^4.0.2",
     "mocha": "^3.4.2",
-    "phantomjs": "^2.1.7",
+    "phantom": "^4.0.4",
     "testem": "^1.18.0"
   },
   "dependencies": {
