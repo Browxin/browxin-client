@@ -2,10 +2,13 @@ var path = require('path');
 var webpack = require('webpack');
 
 var config = {
-  entry: './src/app.js',
+  entry: {
+    example: './src/index.js',
+    index: './src/App.js',
+  },
   output: {
-    filename: 'index.js',
-    path: path.join(__dirname, '/'),
+    filename: '[name].js',
+    path: path.join(__dirname, '/dist/'),
   },
   module: {
     rules: [
@@ -18,6 +21,7 @@ var config = {
   },
   devServer: {
     port: 8080,
+    contentBase: path.join(__dirname, '/example'),
   },
   plugins: [
     new webpack.DefinePlugin({
