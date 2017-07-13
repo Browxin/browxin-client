@@ -29,6 +29,16 @@ $ npm start
 ```
 
 Open localhost:8080 on your browser.
+
+### Preparation
+We use uppercase letters as file name.
+But Git doesn't distinguish by default.
+So please run a command below
+
+```
+$ git config core.ignorecase false
+```
+
 <!--
 ### Provided API
 -->
