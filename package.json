@@ -1,12 +1,12 @@
 {
   "name": "browxin-client",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "engines": {
     "node": "7.3.0",
     "npm": "3.10.10"
   },
   "description": "Web App Platform",
-  "main": "./dist/index.js",
+  "main": "./dist/app.js",
   "scripts": {
     "start": "webpack-dev-server",
     "test": "./node_modules/.bin/testem ci -l Firefox,PhantomJS",

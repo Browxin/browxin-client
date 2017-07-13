@@ -3,8 +3,8 @@ var webpack = require('webpack');
 
 var config = {
   entry: {
-    example: './src/index.js',
-    index: './src/App.js',
+    bundle: './src/index.js',
+    app: './src/App.js',
   },
   output: {
     filename: '[name].js',
