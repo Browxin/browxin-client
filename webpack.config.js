@@ -2,10 +2,15 @@ var path = require('path');
 var webpack = require('webpack');
 
 var config = {
-  entry: './src/app.js',
+  entry: {
+    bundle: './src/root.js',
+    index: './src/index.js',
+  },
   output: {
-    filename: 'index.js',
-    path: path.join(__dirname, '/'),
+    filename: '[name].js',
+    path: path.join(__dirname, '/dist/'),
+    library: 'BrowxinClient',
+    libraryTarget: 'umd',
   },
   module: {
     rules: [
@@ -18,17 +23,13 @@ var config = {
   },
   devServer: {
     port: 8080,
+    contentBase: path.join(__dirname, '/example'),
   },
   plugins: [
     new webpack.DefinePlugin({
       'process.env':{
         'NODE_ENV': JSON.stringify('production')
       },
-    }),
-    new webpack.ProvidePlugin({
-      $: 'jquery',
-      jQuery: 'jquery',
-      'window.jQuery': 'jquery',
     }),
     new webpack.HotModuleReplacementPlugin(),
   ],

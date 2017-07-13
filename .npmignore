@@ -1,4 +1,7 @@
-dist/
+.travis.yml
+test/
+testem.json
+.editorconfig
 
 # Mac
 .DS_Store
