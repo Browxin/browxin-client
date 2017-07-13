@@ -1,6 +1,6 @@
 {
   "name": "browxin-client",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "engines": {
     "node": "7.3.0",
     "npm": "3.10.10"

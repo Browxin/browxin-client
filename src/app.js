@@ -1,6 +1,6 @@
 import React from 'react';
 import { Grid } from 'react-bootstrap';
-import Command from './Command/Command';
+//import Command from './Command/Command';
 
 class Index extends React.Component {
   render(){
@@ -8,7 +8,7 @@ class Index extends React.Component {
       <Grid>
         <h1>Browxin</h1>
         <p className="lead hidden-xs">Open Source, Multiple Search, Commands, Custom Widgets</p>
-        <Command />
+        {/*<Command />*/}
       </Grid>
     );
   }
