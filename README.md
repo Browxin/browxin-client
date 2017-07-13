@@ -14,8 +14,7 @@ As I said, it's a platform, so you can make your own App and commit.
 All Apps should be free in Browxin.
 
 -->
-## For Developers
-You can run Browxin in your local machine to develop.
+## Development
 
 ### Install
 Make sure you have installed npm, node.js.
