@@ -3,7 +3,7 @@ var webpack = require('webpack');
 
 var config = {
   entry: {
-    bundle: './src/root.js',
+    bundle: './src/root.jsx',
     index: './src/index.js',
   },
   output: {
@@ -12,10 +12,13 @@ var config = {
     library: 'BrowxinClient',
     libraryTarget: 'umd',
   },
+  resolve: {
+    extensions: ['*', '.js', '.jsx']
+  },
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.jsx$|\.js$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
       },

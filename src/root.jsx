@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Container from './Container.js';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import { createLogger } from 'redux-logger';
 import { ThemeSwitcher } from 'react-bootstrap-theme-switcher';
-import reducer from './reducers.js';
+import Container from './Container';
+import reducer from './reducers';
 
 const middlewares = [];
 

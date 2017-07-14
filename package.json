@@ -38,7 +38,6 @@
     "eslint-plugin-react": "^7.1.0",
     "mocha": "^3.4.2",
     "phantom": "^4.0.4",
-    "redux-logger": "^3.0.6",
     "testem": "^1.18.0",
     "webpack-dev-server": "^2.4.2"
   },
@@ -55,6 +54,7 @@
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.5",
     "redux": "^3.7.1",
+    "redux-logger": "^3.0.6",
     "webpack": "^2.2.1"
   }
 }

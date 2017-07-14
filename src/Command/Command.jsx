@@ -7,7 +7,7 @@ import {
   Button,
   Glyphicon,
 } from 'react-bootstrap';
-import action from './CommandActions.js';
+import action from './CommandActions';
 
 class Command extends React.Component {
   render() {
