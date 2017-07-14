@@ -10,7 +10,7 @@ import {
 import action from './CommandActions.js';
 
 class Command extends React.Component {
-  render(){
+  render() {
     return (
       <form>
         <FormGroup>
@@ -35,14 +35,12 @@ class Command extends React.Component {
 Command.propTypes = {
 };
 
-const mapStateToProps = state => {
-  return {
-    commandText: state.command.text,
-  };
-};
+const mapStateToProps = state => ({
+  commandText: state.command.text,
+});
 
 const mapDispatchToProps = dispatch => ({
-  handleChangeInput: e => {
+  handleChangeInput: (e) => {
     dispatch(action.changeText(e.target.value));
   },
 });

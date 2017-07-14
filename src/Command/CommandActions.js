@@ -7,5 +7,5 @@ const changeText = text => ({
 
 export default {
   changeText,
-}
+};
 

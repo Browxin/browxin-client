@@ -7,8 +7,13 @@ import { createLogger } from 'redux-logger';
 import { ThemeSwitcher } from 'react-bootstrap-theme-switcher';
 import reducer from './reducers.js';
 
-const logger = createLogger();
-const createStoreWithMiddleware = applyMiddleware(logger)(createStore);
+const middlewares = [];
+
+if (process.env.NODE_ENV === 'development') {
+  const logger = createLogger();
+  middlewares.push(logger);
+}
+const createStoreWithMiddleware = applyMiddleware(...middlewares)(createStore);
 const store = createStoreWithMiddleware(reducer);
 
 ReactDOM.render(
@@ -17,5 +22,5 @@ ReactDOM.render(
       <Container />
     </ThemeSwitcher>
   </Provider>,
-  document.getElementById('app')
+  document.getElementById('app'),
 );
