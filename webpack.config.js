@@ -25,6 +25,7 @@ var config = {
     port: 8080,
     contentBase: path.join(__dirname, '/example'),
   },
+  devtool: process.env.NODE_ENV === 'development' ? 'cheap-module-eval-source-map' : false,
   plugins: [
     new webpack.DefinePlugin({
       'process.env':{
