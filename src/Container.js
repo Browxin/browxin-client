@@ -7,7 +7,7 @@ class Container extends React.Component {
     return (
       <Grid>
         <h1>Browxin</h1>
-        <p className="lead hidden-xs">Open Source, Multiple Search, Commands, Custom Widgets</p>
+        <p className="lead hidden-xs">Open Source, Multiple Search{/*, Commands, Custom Widgets*/}</p>
         <Command />
       </Grid>
     );
