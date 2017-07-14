@@ -9,7 +9,7 @@ import reducer from './reducers.js';
 
 const middlewares = [];
 
-if(process.env.NODE_ENV === 'development'){
+if (process.env.NODE_ENV === 'development') {
   const logger = createLogger();
   middlewares.push(logger);
 }
@@ -22,5 +22,5 @@ ReactDOM.render(
       <Container />
     </ThemeSwitcher>
   </Provider>,
-  document.getElementById('app')
+  document.getElementById('app'),
 );

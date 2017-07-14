@@ -14,6 +14,6 @@ const reducer = (state = initialState, action) => {
     default:
       return Object.assign({}, state);
   }
-}
+};
 
 export default reducer;
