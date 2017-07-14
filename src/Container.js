@@ -3,7 +3,7 @@ import { Grid } from 'react-bootstrap';
 import Command from './Command/Command';
 
 class Container extends React.Component {
-  render(){
+  render() {
     return (
       <Grid>
         <h1>Browxin</h1>
