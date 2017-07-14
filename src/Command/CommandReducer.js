@@ -1,6 +1,6 @@
 import {
   CHANGE_COMMAND_TEXT,
-} from './CommandActions.js';
+} from './CommandActions';
 
 const initialState = {
   text: '',
@@ -9,8 +9,7 @@ const initialState = {
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case CHANGE_COMMAND_TEXT:
-      state.text = action.text;
-      return Object.assign({}, state);
+      return Object.assign({}, state, action);
     default:
       return Object.assign({}, state);
   }
