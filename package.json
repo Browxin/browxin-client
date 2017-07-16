@@ -9,7 +9,7 @@
   "main": "./dist/index.js",
   "scripts": {
     "start": "NODE_ENV=development webpack-dev-server",
-    "test": "NODE_ENV=development ./node_modules/.bin/testem ci -l Firefox,PhantomJS",
+    "test": "NODE_ENV=development ./node_modules/.bin/karma start --single-run --browsers PhantomJS,Firefox",
     "build": "NODE_ENV=production webpack --display-error-details --optimize-minimize"
   },
   "repository": {
@@ -36,9 +36,15 @@
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-react": "^7.1.0",
+    "karma": "^1.7.0",
+    "karma-chai": "^0.1.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-firefox-launcher": "^1.0.1",
+    "karma-mocha": "^1.3.0",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "karma-safari-launcher": "^1.0.0",
     "mocha": "^3.4.2",
     "phantom": "^4.0.4",
-    "testem": "^1.18.0",
     "webpack-dev-server": "^2.4.2"
   },
   "dependencies": {
@@ -48,6 +54,7 @@
     "babel-preset-react": "^6.24.1",
     "bootstrap": "^3.3.7",
     "jquery": "^3.2.1",
+    "lodash": "^4.17.4",
     "react": "^15.6.1",
     "react-bootstrap": "^0.31.0",
     "react-bootstrap-theme-switcher": "^1.0.6",

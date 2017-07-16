@@ -1,6 +1,4 @@
-import {
-  CHANGE_COMMAND_TEXT,
-} from './CommandActions';
+import { CHANGE_COMMAND_TEXT } from './CommandActionTypes';
 
 const initialState = {
   text: '',

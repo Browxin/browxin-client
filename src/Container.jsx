@@ -1,6 +1,6 @@
 import React from 'react';
 import { Grid } from 'react-bootstrap';
-import Command from './Command/Command';
+import Command from '~/Command/Command';
 
 class Container extends React.Component {
   render() {
