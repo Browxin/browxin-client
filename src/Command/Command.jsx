@@ -7,7 +7,7 @@ import {
   Button,
   Glyphicon,
 } from 'react-bootstrap';
-import action from './CommandActions';
+import * as actions from './CommandActions';
 
 class Command extends React.Component {
   render() {
@@ -40,8 +40,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  handleChangeInput: (e) => {
-    dispatch(action.changeText(e.target.value));
+  handleChangeInput: e => {
+    dispatch(actions.changeText(e.target.value));
   },
 });
 
