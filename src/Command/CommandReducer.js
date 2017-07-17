@@ -1,8 +1,6 @@
-import {
-  CHANGE_COMMAND_TEXT,
-} from './CommandActions';
+import { CHANGE_COMMAND_TEXT } from './CommandActionTypes';
 
-const initialState = {
+export const initialState = {
   text: '',
 };
 
@@ -16,3 +14,4 @@ const reducer = (state = initialState, action) => {
 };
 
 export default reducer;
+

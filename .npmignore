@@ -1,7 +1,11 @@
 .travis.yml
-test/
+tests/
 testem.json
 .editorconfig
+src/
+webpack.config.js
+example/
+.babelrc
 
 # Mac
 .DS_Store
