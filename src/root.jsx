@@ -18,7 +18,7 @@ const store = createStoreWithMiddleware(reducer);
 
 ReactDOM.render(
   <Provider store={store}>
-    <ThemeSwitcher themePath="/themes" defaultTheme="lumen">
+    <ThemeSwitcher themePath="themes" defaultTheme="lumen">
       <Container />
     </ThemeSwitcher>
   </Provider>,
