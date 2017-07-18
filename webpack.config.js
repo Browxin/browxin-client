@@ -8,7 +8,7 @@ var config = {
   },
   output: {
     filename: '[name].js',
-    path: path.join(__dirname, '/dist/'),
+    path: __dirname,
     library: 'BrowxinClient',
     libraryTarget: 'umd',
   },
@@ -25,21 +25,13 @@ var config = {
         exclude: /node_modules/,
         loader: 'babel-loader',
       },
-      {
-        test: /\.js$/,
-        exclude: /(node_modules)/,
-        loader: 'eslint-loader',
-        options: {
-          fix: true,
-        },
-      },
     ],
   },
   devServer: {
     port: 8080,
-    contentBase: path.join(__dirname, '/example'),
+    contentBase: __dirname,
   },
-  devtool: process.env.NODE_ENV === 'development' ? 'cheap-module-eval-source-map' : false,
+  devtool: process.env.NODE_ENV === 'development' ? 'inline-source-map' : false,
   plugins: [
     new webpack.DefinePlugin({
       'process.env':{
@@ -49,6 +41,20 @@ var config = {
     new webpack.HotModuleReplacementPlugin(),
   ],
 };
+
+if(process.env.NODE_ENV === 'development'){
+  config.module.rules.push({
+    test: /\.js$/,
+    exclude: /(node_modules)/,
+    loader: 'eslint-loader',
+    enforce: 'pre',
+    options: {
+      fix: true,
+      failOnWarning: false,
+      failOnError: false,
+    }
+  });
+}
 
 module.exports = config;
 

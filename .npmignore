@@ -1,10 +1,10 @@
+geckodriver
 .travis.yml
 tests/
 testem.json
 .editorconfig
 src/
 webpack.config.js
-example/
 .babelrc
 
 # Mac

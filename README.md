@@ -17,7 +17,7 @@ All Apps should be free in Browxin.
 ## Development
 
 ### Install
-Make sure you have installed npm, node.js.
+Make sure you have installed npm, node.js.  
 Then run commands below.
 
 ```
@@ -30,12 +30,20 @@ $ npm start
 Open localhost:8080 on your browser.
 
 ### Preparation
-We use uppercase letters as file name.
-But Git doesn't distinguish by default.
+We use uppercase letters as file name.  
+But Git doesn't distinguish by default.  
 So please run a command below
 
 ```
 $ git config core.ignorecase false
+```
+
+For local test using selenium.  
+Download latest geckodriver and put the driver in the project directory.
+
+```
+browxin-client
+ └──geckodriver
 ```
 
 <!--
