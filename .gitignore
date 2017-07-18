@@ -1,4 +1,5 @@
-dist/
+index.js
+geckodriver
 
 # Mac
 .DS_Store
