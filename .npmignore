@@ -6,6 +6,7 @@ testem.json
 src/
 webpack.config.js
 .babelrc
+example/
 
 # Mac
 .DS_Store

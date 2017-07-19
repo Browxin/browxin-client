@@ -8,7 +8,7 @@ var config = {
   },
   output: {
     filename: '[name].js',
-    path: path.join(__dirname, '/'),
+    path: path.join(__dirname, '/dist/'),
     library: 'BrowxinClient',
     libraryTarget: 'umd',
   },
@@ -29,7 +29,7 @@ var config = {
   },
   devServer: {
     port: 8080,
-    contentBase: path.join(__dirname, '/'),
+    contentBase: path.join(__dirname, '/example'),
   },
   devtool: process.env.NODE_ENV === 'development' ? 'inline-source-map' : false,
   plugins: [

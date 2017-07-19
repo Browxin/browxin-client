@@ -1,5 +1,12 @@
-language: "node_js"
+language: node_js
 node_js: 7
 before_install:
-  - "export DISPLAY=:99.0"
-  - "sh -e /etc/init.d/xvfb start"
+- export DISPLAY=:99.0
+- sh -e /etc/init.d/xvfb start
+deploy:
+  provider: npm
+  email: noskir@icloud.com
+  on:
+    tags: true
+  api_key:
+    secure: FYykTiifbt8dGtXDst0FtfcTqTMvrOjqd1oz7NkjgwZr4001r9vV8IdaoowBQIko4CgBClrQXbgeaDWxLknfa+SqQUlW4MOybg1IaEDa+wOLQJEHV4k1hwR4eo457gyoZuC/IXcUJWc+ZmqZ9WmQhZa/f82H/3ltlhMIpqxDHr4uxPPjefSIw2Vgq2iXbLu3k2R30jpqwuM/z+xSRb9XKqkGETUtdTCxEt4ZjemR1hp8wcRTtmh98kmqQHL8OIQh3AX8GSkGxWGf1qiwY0pM6RWIT5ONziHgNx7kOrD+lJO2AbPTXT214CSKXw7XQ8dMueW9IAX6EulvTU/ggJVmnx7ecU754iXyO2afQCkHCZLtNz/lLDTBdVa4gcQ3CaEXC+BtCc2BE0A8nOwlW7PidLJIcprR0lwEUP/LU/1SVS3m68nMTmKz7XNGkYGsYXKjrtPFBdDpmaJWccjCbwX6ul7NTGunw0GUl90IlSyVzWpVqJEdgE3rKbU1TbdRIOQQFsuYn/6ev/b+aeg5F3GFGjIfIa+7zRGud2J4xhFIvhJxO9VBeuddS3oy3Ra2undzlgFnuMu4e09kxmqQOIk0iuXqr19JLZpnzeg6EqdCE2/DskmdoGGz6Kzuc9aUZ7PAxOSInuYNseFFoxgnXEaW5mskRYpzUhactN8bAbJA+t0=
