@@ -1,12 +1,9 @@
 geckodriver
 .travis.yml
-tests/
 testem.json
 .editorconfig
-src/
 webpack.config.js
 .babelrc
-example/
 .eslintrc.json
 karma.conf.js
 
