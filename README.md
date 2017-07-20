@@ -27,7 +27,7 @@ $ npm install
 $ npm start
 ```
 
-Open localhost:8080 on your browser.
+Open [localhost:8080](http://localhost:8080) on your browser.
 
 ### Preparation
 We use uppercase letters as file name.  
@@ -39,7 +39,7 @@ $ git config core.ignorecase false
 ```
 
 For local test using selenium.  
-Download latest geckodriver and put the driver in the project directory.
+Download latest [geckodriver](https://github.com/mozilla/geckodriver/releases) and put the driver in the project directory.
 
 ```
 browxin-client
