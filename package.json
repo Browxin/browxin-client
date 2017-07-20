@@ -1,6 +1,6 @@
 {
   "name": "browxin-client",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "engines": {
     "node": "7.3.0",
     "npm": "3.10.10"
@@ -17,6 +17,12 @@
     "type": "git",
     "url": "git+https://github.com/Browxin/browxin-client.git"
   },
+  "files": [
+	  "README.md",
+	  "package.json",
+	  "dist",
+	  "LICENSE"
+  ],
   "keywords": [
     "browxin",
     "web",
